@@ -1,0 +1,8 @@
+#spring.application.name=ssundev-project
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: "ssundev"
+    password: "ssundev"
