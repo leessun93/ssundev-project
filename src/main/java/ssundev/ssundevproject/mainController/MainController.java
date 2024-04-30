@@ -1,4 +1,4 @@
-package mainController;
+package ssundev.ssundevproject.mainController;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -12,7 +12,7 @@ public class MainController {
     public String ControllerMain(){
         System.out.println("진입");
         log.info("진입");
-        return "index";
+        return "main";
     }
 
     /*    @RequestMapping("/test")
