@@ -2,6 +2,7 @@ package ssundev.ssundevproject.mainController;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,9 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
     @GetMapping("/hi")
-    public String ControllerMain(){
+    public String ControllerMain(Model model){
         System.out.println("진입");
         log.info("진입");
+        model.addAttribute("test","성공");
+
         return "main";
     }
 
