@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    	.container{
+    		width: 220px; height : 310px;
+    		position : relative;
+    	}
+    	.overlay{
+    		position : absolute;
+    		width:220px;
+    		height: 310px;
+    		background: linear-gradient(105deg,
+    			transparent 40%,
+    			rgba(255,219,112,0.8) 45%,
+    			rgba(132,50,255,0.6) 50%,
+    			transparent 54%   			
+    		);
+    		filter: brightness(1.2) opacity(0.8);
+    		mix-blend-mode: color-dodge;
+    		background-size: 150% 150%;
+    		background-position: 100%;
+    		transition: all 0.1s;
+    		 
+    	}
+    	.card{
+    		width:220px; height:310px;
+    		background-image: url("https://i.namu.wiki/i/ftpUAmXUIr6IbyBPEAKO52I9YPh_4cvC2npYMnYIS7F1whWHhn3Dzj2w7zPGueGOcmSRTGgct0NB5VEMlQfMnuWzJ_74WrxuK6Vws9hrg5SIEq0b4e3grIAnlRiK_ya7dw8vNn6aD4NRcGkJ1bT3qw.webp");
+    		background-size: cover;
+    	}
+    </style>
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="overlay"></div>
+		<div class="card"></div>
+	</div>
+	
+	<script>
+		var container = document.querySelector('.container')
+		var overlay = document.querySelector('.overlay')
+		container.addEventListener('mousemove', function(e){
+			var x = e.offsetX
+			var y = e.offsetY
+			/* console.log(x, y); */
+			var rotateY = -1/5 * x + 20
+			var rotateX = 4/30 * y - 20 
+			// 앞으로 문자열 ``로 통일 기존 '', "" 는 문자열만됨
+			/* console.log(`${rotateX}`, `${rotateY}`); */
+			//백그라운드 빤짝임 움직임
+			overlay.style = `background-position: ${x/5 + y/5}%`
+			//카드 움직임
+			container.style = `transform : perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+		})
+		
+		container.addEventListener('mouseout', function(){
+			overlay.style = `filter : opacity(0)`
+			container.style = `transform : perspective(350px) rotateY(0deg) rotateX(0deg)`
+		})
+	</script>
+</body>
+</html>

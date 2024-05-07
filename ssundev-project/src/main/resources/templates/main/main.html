@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- 나중에 공통으로 뺄 임포트영역-->
+        <link rel="stylesheet" href="common/css/bootstrap.min.css">
+        <!-- Bootstrap CSS CDN -->
+<!--         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		 -->
+        <title>메인</title>
+
+		<!-- css  -->
+		<link rel="stylesheet" href="css/main-css.css">
+
+
+    </head>
+    <body>
+    
+        <!-- 다른 스크립트에서 제이쿼리 사용 예시 -->
+    	<script>
+	        $(document).ready(function(){
+	            // 이곳에 제이쿼리 코드 작성
+	            $("#header").css("color", "blue");
+	        });
+    	</script>
+    
+    
+    
+    
+        <div id="wrap" style="width: 1280px; margin:0 auto;">
+            <!--헤더-->
+            <div class="row">
+				<div class="col-md-12">
+					<div id="header">zzzz</div>
+					<th:block th:replace="~{views/header :: header}"></th:block>
+				</div>
+            </div>
+            <!--컨테이너-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                    	<!-- 추 후 이미지 움직이는 css적용 예정 움직이고 남은자리엔 insert링크 보이도록 생성 예정 -->
+                        <div class="col-md-6" style="background-color:red">
+                        	<a href="#"><img src="img/guitar.jpg"/></a>
+                        </div>
+                        <div class="col-md-6" style="background-color:blue">
+                        	<a href="#"><img src="img/effector.jpg"/></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" style="background-color:green">
+                        	<a href="#"><img src="img/amp.jpg"/></a>
+                        </div>
+                        <div class="col-md-6" style="background-color:yellow">
+                        	<a href="#">4</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-md-12">
+            		<button type="button" class="btn btn-primary" onclick="location.href='/card'">3D 이미지 보러가기</button>
+            	</div>
+            </div>
+            <!--푸터-->
+            <div class="row">
+                <div class="col-md-12">
+                    footer
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
