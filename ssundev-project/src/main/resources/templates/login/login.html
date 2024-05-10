@@ -38,12 +38,30 @@
     		border : none;
     		border-radius : 5px;
     		color : #333;
+		    box-shadow: 0px 0px 20px aqua;
     	}
     	button:hover{
-    		background-color: #333;
-    		color: skyblue;
+    		background-color: skyblue;
+    		color: #333;
+    		box-shadow: 0px 0px 50px aqua;
     	}
-    	
+    	#joinus {
+    	 margin : auto 0 auto auto;
+    	 color : skyblue;
+    	 text-decoration: none;
+    	}
+    	#joinus:visited {
+    	 color : skyblue;
+    	 text-decoration: none;    	 
+    	}
+    	#joinus:hover {
+    	 color : skyblue;
+    	 text-decoration: none;
+    	}
+    	#joinus:active {
+		  color : skyblue;
+		  text-decoration: none;
+		}
     	/* 원 */
     	body {
     		background : black;
@@ -106,6 +124,8 @@
 				<input type="email" name="id" value="" placeholder="email">
 				<input type="password" name="password" value="" placeholder="password">
 				<button>login</button>
+				<p>회원가입 성공 다시 로그인해주세요</p>
+				<a href="/login/ContextUs" id="joinus">join us</a>
 			</div>
 		</form>
 	</div>

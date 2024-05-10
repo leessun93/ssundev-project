@@ -1,0 +1,24 @@
+#spring.application.name=ssundev-project
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/orcl
+    username: ssundev
+    password: ssundev
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  mybatis:
+    # 데이터베이스 연결 정보
+    configuration:
+      # 데이터베이스 연결 정보
+      jdbcTypeForNull: NULL
+      mapUnderscoreToCamelCase: true
+
+    # 데이터베이스 연결 정보
+    datasource:
+      driver-class-name: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin:@//localhost:1521/orcl
+      username: username
+      password: password
+
+    # 매퍼 파일의 위치 설정
+    mapper-locations: classpath:mapper/*.xml    
