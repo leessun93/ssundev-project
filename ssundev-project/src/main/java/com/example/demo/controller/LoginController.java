@@ -1,4 +1,4 @@
-package com.example.demo.loginController;
+package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.UserVo.UserVo;
-import com.example.demo.loginService.LoginService;
+import com.example.demo.Vo.UserVo;
+import com.example.demo.service.LoginService;
+
+import ch.qos.logback.core.model.Model;
 
 @Controller
 @RequestMapping("/login")
@@ -57,12 +59,28 @@ public class LoginController {
 	 * @return
 	 */
 	@PostMapping("/JoinUs")
-	public String JoinUs() {
+	public String JoinUs(@ModelAttribute UserVo userVo, Model model) {
 		/*성공 혹은 실패 */
-		System.out.println("회원가입양식제출");
-		String s = loginService.contextUs();
-		System.out.println(s);
-		return "redirect:/login";
+		
+		System.out.println("조인성공" + 
+							userVo.getUserId()+
+							userVo.getUserPassword() +
+							userVo.getUserName() +
+							userVo.getUserGender() +
+							userVo.getPassWordEmailAddress()
+		);
+		
+		int result = loginService.contextUs(userVo);
+		
+		if(result == 1) {
+			System.out.println("로긴성공");
+			return "redirect:/main";
+		}else {
+			System.out.println("로긴실패");
+			return "login/ContextUs";
+		}
+		
+
 	}
 	
 	

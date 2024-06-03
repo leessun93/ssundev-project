@@ -28,13 +28,17 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc8:19.8.0.0' // Oracle JDBC Driver
+	//implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '3.0.3'
+	
 	//oracle 의존성 추가
-	implementation 'com.oracle.database.jdbc:ojdbc8:19.8.0.0'
-	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+	//implementation 'com.oracle.database.jdbc:ojdbc8:19.8.0.0'
+	//runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
 	
     // mybatis와 관련된 dependency (jdbc, mybatis)
-    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+    //implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	//implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '3.0.3'
 }
 
 tasks.named('test') {

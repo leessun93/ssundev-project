@@ -1,80 +1,78 @@
-package com.example.demo.UserVo;
+package com.example.demo.Vo;
 
 public class UserVo {
-	private int 	UserSeq; 		
-	private String 	UserId; 			
-	private String 	UserPassword; 		
-	private String 	UserName; 			
-	private String 	UserGender; 		
-	private int		LoginFailCount; 	
-	private String 	PassWordEmailAddress; 
-	private int 	LogInBlock; 
-	private int 	LastUserSeq; 
-	private String 	LastDateTime;
-	
+	private int 	userSeq; 		
+	private String 	userId; 			
+	private String 	userPassword; 		
+	private String 	userName; 			
+	private String 	userGender; 		
+	private int		loginFailCount; 	
+	private String 	passWordEmailAddress; 
+	private int 	logInBlock; 
+	private int 	lastUserSeq; 
+	private String 	lastDateTime;
 	public int getUserSeq() {
-		return UserSeq;
+		return userSeq;
 	}
 	public void setUserSeq(int userSeq) {
-		UserSeq = userSeq;
+		this.userSeq = userSeq;
 	}
 	public String getUserId() {
-		return UserId;
+		return userId;
 	}
 	public void setUserId(String userId) {
-		UserId = userId;
+		this.userId = userId;
 	}
 	public String getUserPassword() {
-		return UserPassword;
+		return userPassword;
 	}
 	public void setUserPassword(String userPassword) {
-		UserPassword = userPassword;
+		this.userPassword = userPassword;
 	}
 	public String getUserName() {
-		return UserName;
+		return userName;
 	}
 	public void setUserName(String userName) {
-		UserName = userName;
+		this.userName = userName;
 	}
 	public String getUserGender() {
-		return UserGender;
+		return userGender;
 	}
 	public void setUserGender(String userGender) {
-		UserGender = userGender;
+		this.userGender = userGender;
 	}
 	public int getLoginFailCount() {
-		return LoginFailCount;
+		return loginFailCount;
 	}
 	public void setLoginFailCount(int loginFailCount) {
-		LoginFailCount = loginFailCount;
+		this.loginFailCount = loginFailCount;
 	}
 	public String getPassWordEmailAddress() {
-		return PassWordEmailAddress;
+		return passWordEmailAddress;
 	}
 	public void setPassWordEmailAddress(String passWordEmailAddress) {
-		PassWordEmailAddress = passWordEmailAddress;
+		this.passWordEmailAddress = passWordEmailAddress;
 	}
 	public int getLogInBlock() {
-		return LogInBlock;
+		return logInBlock;
 	}
 	public void setLogInBlock(int logInBlock) {
-		LogInBlock = logInBlock;
+		this.logInBlock = logInBlock;
 	}
 	public int getLastUserSeq() {
-		return LastUserSeq;
+		return lastUserSeq;
 	}
 	public void setLastUserSeq(int lastUserSeq) {
-		LastUserSeq = lastUserSeq;
+		this.lastUserSeq = lastUserSeq;
 	}
 	public String getLastDateTime() {
-		return LastDateTime;
+		return lastDateTime;
 	}
 	public void setLastDateTime(String lastDateTime) {
-		LastDateTime = lastDateTime;
+		this.lastDateTime = lastDateTime;
 	}
 	
-	
-	
+
 	
 	
 	
